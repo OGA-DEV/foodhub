@@ -1,0 +1,208 @@
+MDScreen:
+    name:"menu"
+    md_bg_color: 128/255, 128/255, 128/255, 1
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: "Menu"
+            right_action_items:
+                [
+                ["magnify", lambda x: app.callback(x), "", "magnify"],
+                ["message-reply", lambda x: app.callback(x), "", "Message reply"],
+                ]
+            left_action_items:[["menu",  lambda x: nav_drawer.toggle_nav_drawer("open")]] 
+            md_bg_color: 0/255, 14/255, 51/255, 1
+    # MDNavigationDrawer:
+
+    #     ContentNavigationDrawer:
+
+        ScrollView:
+            MDGridLayout:
+                cols:2
+                size_hint_y:2.4
+                spacing: '10dp'
+                md_bg_color: 89/255, 99/255, 128/255, 1
+                MDCard:
+                    size_hint_x: .5
+                    size_hint_y: .3
+                    
+                    MDBoxLayout:
+                        orientation:"vertical"
+                        padding: '5dp'
+                        Image:
+                            source:"assets/plate1.png"
+                        MDLabel:
+                            text:"Katogo"
+                            size_hint_y: .2
+                            font_style:"H6"
+                        MDLabel:
+                            text: "3500"
+                            size_hint_y: .2
+                            font_size:"15dp"
+                        MDIcon:
+                            icon:"cart-plus"
+                            pos_hint:{"center_x": .715, "center_y": .60}
+
+                MDCard:
+                    size_hint_x: .5
+                    size_hint_y: .3
+                    MDBoxLayout:
+                        orientation:"vertical"
+                        padding: '5dp'
+                        Image:
+                            source:"assets/blog-2.jpg"
+                        MDLabel:
+                            text:"Katogo"
+                            size_hint_y: .2
+                            font_style:"H6"
+                        MDLabel:
+                            text: "3500"
+                            size_hint_y: .2
+                            font_size:"15dp"
+
+                        MDIcon:
+                            icon:"cart-plus"
+                            pos_hint:{"center_x": .715, "center_y": .60}
+                MDCard:
+                    size_hint_x: .5
+                    size_hint_y: .3
+                    MDBoxLayout:
+                        orientation:"vertical"
+                        padding: '5dp'
+                        Image:
+                            source:"assets/blog-3.jpg"
+                        MDLabel:
+                            text:"Katogo"
+                            size_hint_y: .2
+                            font_style:"H6"
+                            text_color: 204/255,255/255,241/255
+                        MDLabel:
+                            text: "3500"
+                            size_hint_y: .2
+                            font_size:"15dp"
+
+                        MDIcon:
+                            icon:"cart-plus"
+                            pos_hint:{"center_x": .715, "center_y": .60}
+                MDCard:
+                    size_hint_x: .5
+                    size_hint_y: .3
+                    MDBoxLayout:
+                        orientation:"vertical"
+                        padding: '5dp'
+                        Image:
+                            source:"assets/cta-banner.png"
+                        MDLabel:
+                            text:"Katogo"
+                            size_hint_y: .2
+                            font_style:"H6"
+                        MDLabel:
+                            text: "3500"
+                            size_hint_y: .2
+                            font_size:"15dp"
+
+                        MDIcon:
+                            icon:"cart-plus"
+                            pos_hint:{"center_x": .715, "center_y": .60}
+                MDCard:
+                    size_hint_x: .5
+                    size_hint_y: .3
+                    MDBoxLayout:
+                        orientation:"vertical"
+                        padding: '5dp'
+                        Image:
+                            source:"assets/food-menu-2.png"
+                        MDLabel:
+                            text:"Katogo"
+                            size_hint_y: .2
+                            font_style:"H6"
+                        MDLabel:
+                            text: "3500"
+                            size_hint_y: .2
+                            font_size:"15dp"
+
+                        MDIcon:
+                            icon:"cart-plus"
+                            pos_hint:{"center_x": .715, "center_y": .60}
+                MDCard:
+                    size_hint_x: .5
+                    size_hint_y: .3
+                    MDBoxLayout:
+                        orientation:"vertical"
+                        padding: '5dp'
+                        Image:
+                            source:"assets/food-menu-3.png"
+                        MDLabel:
+                            text:"Katogo"
+                            size_hint_y: .2
+                            font_style:"H6"
+                        MDLabel:
+                            text: "3500"
+                            size_hint_y: .2
+                            font_size:"15dp"
+
+                        MDIcon:
+                            icon:"cart-plus"
+                            pos_hint:{"center_x": .715, "center_y": .60}
+                MDCard:
+                    size_hint_x: .5
+                    size_hint_y: .3
+                    MDBoxLayout:
+                        orientation:"vertical"
+                        padding: '5dp'
+                        Image:
+                            source:"assets/hero-banner.png"
+                        MDLabel:
+                            text:"Katogo"
+                            size_hint_y: .2
+                            font_style:"H6"
+                        MDLabel:
+                            text: "3500"
+                            size_hint_y: .2
+                            font_size:"15dp"
+
+                        MDIcon:
+                            icon:"cart-plus"
+                            pos_hint:{"center_x": .715, "center_y": .60}
+                MDCard:
+                    size_hint_x: .5
+                    size_hint_y: .3
+                    md_bg_color:
+                    MDBoxLayout:
+                        orientation:"vertical"
+                        padding: '5dp'
+                        Image:
+                            source:"assets/promo-4.png"
+                        MDLabel:
+                            text:"Katogo"
+                            size_hint_y: .2
+                            font_style:"H6"
+                        MDLabel:
+                            text: "3500"
+                            size_hint_y: .2
+                            font_size:"15dp"
+
+                        MDIcon:
+                            icon:"cart-plus"
+                            pos_hint:{"center_x": .715, "center_y": .60}
+
+        # MDFloatLayout:
+        #     md_bg_color: 1, 1, 1, 1
+        #     ScreenManager:
+        #         id: Screen
+        #         transition: NoTransition()
+        #         MDScreen:
+
+
+
+
+        MDBottomAppBar:
+            md_bg_color: 0/255, 14/255, 51/255, 1
+            MDTopAppBar:
+                haling:"left"
+                left_action_items:[['home',lambda x : print(home)],['bell',lambda x : print('Notification')],]
+                type:'bottom'
+                icon_color:0/255, 14/255, 51/255, 1
+                mode:'end'
+                icon:"cart"
+        

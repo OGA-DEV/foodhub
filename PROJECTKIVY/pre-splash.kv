@@ -1,0 +1,49 @@
+MDScreen:
+    name: "pre-splash"
+    MDFloatLayout:
+        md_bg_color:0/255, 14/255, 51/255, 1
+        Image:
+            source: "assets/about-banner.png"
+            size_hint: .26, .26
+            pos_hint: {"center_x": .5, "center_y": .55}
+            canvas.before:
+                Color:
+                    rgb:1,1,1,1
+                Ellipse:
+                    size: 130, 130
+                    pos: 110, 250
+
+        MDLabel:
+            text: 'MUBS-HUB'  
+            pos_hint:{"center_x":.7,"center_y": .3}
+            haling: "center" 
+            theme_text_color:"Custom"
+            text_color:1,1,1,1
+            font_size:"38sp"
+            font_name: "Poppins-SemiBold.ttf"
+            
+        MDLabel:
+            text: 'Enjoy the MUBS delicacy.'  
+            pos_hint:{"center_x":.75,"center_y": .25}
+            haling: "center" 
+            theme_text_color:"Custom"
+            text_color:1,1,1,1
+            font_size:"15sp"
+            font_name: "Poppins-Italic.ttf"
+
+        MDFlatButton:
+            id: submit
+            text: "SIGN-UP"
+            size_hint: .79, .08
+            font_name:"Poppins-Medium.ttf"
+            pos_hint:{"center_x": .5, "center_y": .10}
+            
+            canvas.before:
+                Color:
+                    rgb:41/255, 135/255,168/255
+                RoundedRectangle:
+                    size: self.size
+                    pos: self.pos
+                    radius: [6]
+            on_release:
+                app.root.current ="signup"

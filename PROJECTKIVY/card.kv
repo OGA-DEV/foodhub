@@ -1,0 +1,128 @@
+MDScreen:
+    name:"card"
+    md_bg_color: 56/255, 40/255, 81/255,1
+    MDBoxLayout:
+        orientation:"vertical"
+        MDBoxLayout:
+            size_hint_y: .25
+            padding: dp(25)
+            MDBoxLayout:
+                orientation: 'vertical'
+                MDIconButton:
+                    icon:"chevron-left"
+                    user_font_size:"35sp"
+                    pos_hint:{"center_y": .95}
+                    on_release:
+                        app.root.current = "login"
+                # MDLabel:
+                #     text:"Back"
+                #     font_size:"17sp"
+                #     font_name: "Poppins-Regular.ttf"
+                #     pos_hint:{"center_x":.615, "center_y":.949}
+                MDLabel:
+                    text: 'MUBS-FOOD HUB'
+                    font_style:"H4"
+                    theme_text_color:"Custom"
+                    text_color:1,1,1,1
+                    # pos_hint:{"center_y": .95}
+                MDBoxLayout:
+                    adaptive_size: True
+                    spacing: '10dp'
+                   
+            Image:
+                source:"assets/about-banner.png"
+               
+
+
+        MDGridLayout:
+            size_hint_y: .75
+            padding:"15dp"
+            spacing:"15dp"
+            cols:2
+            ElementCard:
+                image:"assets/hero-banner.png"
+                text:"BREAKFAST"
+                
+                
+
+            ElementCard:
+                image:"assets/food-menu-4.png"
+                text:"LUNCH"
+                MDTextButton:
+                    text: "View"
+                    custom_color: 0, 1, 0, 1
+                    on_release:
+                        app.root.current ="menu"  
+            ElementCard:
+                image:"assets/promo-4.png"
+                text:"SNACKS"
+                MDTextButton:
+                    text: "View"
+                    custom_color: 0, 1, 0, 1
+                    on_release:
+                        app.root.current ="menu"
+            ElementCard:
+                image:"assets/home.png"
+                text:"DRINKS"
+                MDTextButton:
+                    text: "View"
+                    custom_color: 0, 1, 0, 1
+                    on_release:
+                        app.root.current ="menu"
+            ElementCard:
+                image:"assets/hero-banner.png"
+                text:"DESSERT"
+                MDTextButton:
+                    text: "View"
+                    custom_color: 0, 1, 0, 1
+                    on_release:
+                        app.root.current ="menu"
+                
+            ElementCard:
+                image:"assets/promo-3.png"
+                text:"AFRICAN LUWOMBO"
+                MDTextButton:
+                    text: "View"
+                    custom_color: 0, 1, 0, 1
+                    on_release:
+                        app.root.current ="menu"
+
+                
+
+
+
+<ElementCard@MDCard>:
+    md_bg_color: 69/255, 55/255, 86/255 , 1
+    # size_hint_y: None
+    padding: "15dp"
+    spacing: "15dp"
+    radius:[25]
+    # height:'175dp'
+    image:''
+    text:""
+    subtext:''
+    items_count:""
+    orientation: 'vertical'
+    Image:
+        source: root.image
+    MDBoxLayout:
+        orientation:"vertical"
+        MDLabel:
+            halign:"center"
+            text:root.text
+        MDLabel:
+            halign:"center"
+            font_style:"Subtitle1"
+            text:root.subtext
+        MDLabel:
+            halign:"center"
+            font_style:'Caption'
+            text:root.subtext
+
+        MDLabel:
+            halign:"center"
+            text:root.items_count
+
+
+
+
